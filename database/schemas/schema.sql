@@ -137,3 +137,16 @@ CREATE TABLE grades (
     FOREIGN KEY (graded_by)     REFERENCES users(id)
 );
 
+-- 010: notifications
+CREATE TABLE notifications (
+    id          INT UNSIGNED    AUTO_INCREMENT PRIMARY KEY,
+    user_id     INT UNSIGNED    NOT NULL,
+    title       VARCHAR(180)    NOT NULL,
+    body        TEXT            NOT NULL,
+    type        VARCHAR(50)     NOT NULL DEFAULT 'info',  -- info, warning, grade, attendance
+    is_read     TINYINT(1)      NOT NULL DEFAULT 0,
+    created_at  DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    INDEX idx_user_read (user_id, is_read)
+);
+
