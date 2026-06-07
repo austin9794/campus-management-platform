@@ -231,3 +231,25 @@ VALUES
 'Programming Assignment 1 has been graded.',
 'grade'
 );
+
+-- ==========================================================
+-- SCHEDULE
+-- ==========================================================
+
+INSERT INTO schedules
+(
+course_id,
+day_of_week,
+start_time,
+end_time,
+room
+)
+VALUES
+(
+1,
+0,
+'09:00:00',
+'11:00:00',
+'Lab A1'
+);
+
