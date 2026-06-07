@@ -77,3 +77,30 @@ VALUES
 '2026-12-20',
 1
 );
+
+-- ==========================================================
+-- COURSES
+-- ==========================================================
+
+INSERT INTO courses
+(
+code,
+title,
+description,
+credits,
+max_capacity,
+department_id,
+faculty_id,
+semester_id
+)
+VALUES
+(
+'CS101',
+'Introduction to Programming',
+'Fundamentals of programming using modern software development practices.',
+3,
+40,
+1,
+2,
+1
+);
