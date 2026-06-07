@@ -150,3 +150,14 @@ CREATE TABLE notifications (
     INDEX idx_user_read (user_id, is_read)
 );
 
+-- 011: schedules
+CREATE TABLE schedules (
+    id          INT UNSIGNED    AUTO_INCREMENT PRIMARY KEY,
+    course_id   INT UNSIGNED    NOT NULL,
+    day_of_week TINYINT         NOT NULL,   -- 0=Mon, 6=Sun
+    start_time  TIME            NOT NULL,
+    end_time    TIME            NOT NULL,
+    room        VARCHAR(60)     NULL,
+    FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE
+);
+
