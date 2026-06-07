@@ -161,3 +161,18 @@ CREATE TABLE schedules (
     FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE
 );
 
+-- 012: audit_logs
+CREATE TABLE audit_logs (
+    id          BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id     INT UNSIGNED    NULL,
+    action      VARCHAR(120)    NOT NULL,
+    entity      VARCHAR(60)     NULL,
+    entity_id   INT UNSIGNED    NULL,
+    old_value   JSON            NULL,
+    new_value   JSON            NULL,
+    ip_address  VARCHAR(45)     NULL,
+    created_at  DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    INDEX idx_user   (user_id),
+    INDEX idx_entity (entity, entity_id),
+    INDEX idx_time   (created_at)
+);
