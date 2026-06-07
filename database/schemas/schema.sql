@@ -61,3 +61,18 @@ CREATE TABLE courses (
     INDEX idx_department (department_id)
 );
 
+-- 005: enrollments (student ↔ course many-to-many)
+CREATE TABLE enrollments (
+    id          INT UNSIGNED    AUTO_INCREMENT PRIMARY KEY,
+    student_id  INT UNSIGNED    NOT NULL,
+    course_id   INT UNSIGNED    NOT NULL,
+    status      ENUM('active','dropped','completed') NOT NULL DEFAULT 'active',
+    enrolled_at DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    dropped_at  DATETIME        NULL,
+    UNIQUE KEY uq_enrollment (student_id, course_id),
+    FOREIGN KEY (student_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (course_id)  REFERENCES courses(id) ON DELETE CASCADE,
+    INDEX idx_course  (course_id),
+    INDEX idx_student (student_id)
+);
+
