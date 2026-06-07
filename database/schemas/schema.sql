@@ -110,3 +110,18 @@ CREATE TABLE assignments (
     INDEX idx_course_due (course_id, due_date)
 );
 
+-- 008: submissions
+CREATE TABLE submissions (
+    id              INT UNSIGNED    AUTO_INCREMENT PRIMARY KEY,
+    assignment_id   INT UNSIGNED    NOT NULL,
+    student_id      INT UNSIGNED    NOT NULL,
+    file_path       VARCHAR(255)    NULL,
+    text_content    TEXT            NULL,
+    submitted_at    DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    is_late         TINYINT(1)      NOT NULL DEFAULT 0,
+    status          ENUM('pending','graded','returned') NOT NULL DEFAULT 'pending',
+    UNIQUE KEY uq_submission (assignment_id, student_id),
+    FOREIGN KEY (assignment_id) REFERENCES assignments(id) ON DELETE CASCADE,
+    FOREIGN KEY (student_id)    REFERENCES users(id) ON DELETE CASCADE
+);
+
