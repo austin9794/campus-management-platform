@@ -203,3 +203,31 @@ VALUES
 'Good work. Well structured solution with minor improvements required.'
 );
 
+-- ==========================================================
+-- NOTIFICATIONS
+-- ==========================================================
+
+INSERT INTO notifications
+(user_id,title,body,type)
+VALUES
+
+(
+1,
+'System Initialized',
+'Campus Management Platform demo data loaded.',
+'info'
+),
+
+(
+2,
+'Student Enrollment',
+'John Student has enrolled in CS101.',
+'info'
+),
+
+(
+3,
+'Assignment Graded',
+'Programming Assignment 1 has been graded.',
+'grade'
+);
