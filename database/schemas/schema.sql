@@ -125,3 +125,15 @@ CREATE TABLE submissions (
     FOREIGN KEY (student_id)    REFERENCES users(id) ON DELETE CASCADE
 );
 
+-- 009: grades
+CREATE TABLE grades (
+    id              INT UNSIGNED    AUTO_INCREMENT PRIMARY KEY,
+    submission_id   INT UNSIGNED    NOT NULL UNIQUE,
+    graded_by       INT UNSIGNED    NOT NULL,
+    marks_obtained  DECIMAL(6,2)    NOT NULL,
+    feedback        TEXT            NULL,
+    graded_at       DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (submission_id) REFERENCES submissions(id) ON DELETE CASCADE,
+    FOREIGN KEY (graded_by)     REFERENCES users(id)
+);
+
