@@ -50,3 +50,16 @@ NOW()
 'student',
 NOW()
 );
+
+-- ==========================================================
+-- DEPARTMENTS
+-- ==========================================================
+
+INSERT INTO departments
+(name,code,head_id)
+VALUES
+(
+'Computer Science',
+'CS',
+2
+);
