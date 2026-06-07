@@ -21,3 +21,13 @@ CREATE TABLE users (
     INDEX idx_email (email)
 );
 
+-- 002: departments
+CREATE TABLE departments (
+    id          INT UNSIGNED    AUTO_INCREMENT PRIMARY KEY,
+    name        VARCHAR(120)    NOT NULL,
+    code        VARCHAR(20)     NOT NULL UNIQUE,
+    head_id     INT UNSIGNED    NULL,
+    created_at  DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (head_id) REFERENCES users(id) ON DELETE SET NULL
+);
+
