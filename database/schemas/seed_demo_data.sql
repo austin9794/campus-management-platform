@@ -253,3 +253,32 @@ VALUES
 'Lab A1'
 );
 
+-- ==========================================================
+-- AUDIT LOGS
+-- ==========================================================
+
+INSERT INTO audit_logs
+(
+user_id,
+action,
+entity,
+entity_id,
+ip_address
+)
+VALUES
+
+(
+1,
+'SYSTEM_SEED',
+'users',
+1,
+'127.0.0.1'
+),
+
+(
+2,
+'CREATE_ASSIGNMENT',
+'assignments',
+1,
+'127.0.0.1'
+);
