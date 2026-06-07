@@ -183,3 +183,23 @@ VALUES
 NOW(),
 'graded'
 );
+
+-- ==========================================================
+-- GRADES
+-- ==========================================================
+
+INSERT INTO grades
+(
+submission_id,
+graded_by,
+marks_obtained,
+feedback
+)
+VALUES
+(
+1,
+2,
+85,
+'Good work. Well structured solution with minor improvements required.'
+);
+
