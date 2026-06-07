@@ -135,3 +135,30 @@ VALUES
 (3,1,'2026-09-05','present',2),
 (3,1,'2026-09-12','present',2),
 (3,1,'2026-09-19','absent',2);
+
+-- ==========================================================
+-- ASSIGNMENTS
+-- ==========================================================
+
+INSERT INTO assignments
+(
+course_id,
+title,
+description,
+total_marks,
+due_date,
+allow_late,
+late_penalty_pct,
+created_by
+)
+VALUES
+(
+1,
+'Programming Assignment 1',
+'Create a simple student management program.',
+100,
+'2026-10-15 23:59:59',
+1,
+10,
+2
+);
