@@ -41,3 +41,23 @@ CREATE TABLE semesters (
     created_at  DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
+-- 004: courses
+CREATE TABLE courses (
+    id              INT UNSIGNED    AUTO_INCREMENT PRIMARY KEY,
+    code            VARCHAR(20)     NOT NULL UNIQUE,   -- e.g. CS101
+    title           VARCHAR(180)    NOT NULL,
+    description     TEXT            NULL,
+    credits         TINYINT         NOT NULL DEFAULT 3,
+    max_capacity    SMALLINT        NOT NULL DEFAULT 40,
+    department_id   INT UNSIGNED    NOT NULL,
+    faculty_id      INT UNSIGNED    NULL,
+    semester_id     INT UNSIGNED    NOT NULL,
+    is_active       TINYINT(1)      NOT NULL DEFAULT 1,
+    created_at      DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (department_id) REFERENCES departments(id),
+    FOREIGN KEY (faculty_id)    REFERENCES users(id) ON DELETE SET NULL,
+    FOREIGN KEY (semester_id)   REFERENCES semesters(id),
+    INDEX idx_semester (semester_id),
+    INDEX idx_department (department_id)
+);
+
