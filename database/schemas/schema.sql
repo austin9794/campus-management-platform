@@ -31,3 +31,13 @@ CREATE TABLE departments (
     FOREIGN KEY (head_id) REFERENCES users(id) ON DELETE SET NULL
 );
 
+-- 003: semesters
+CREATE TABLE semesters (
+    id          INT UNSIGNED    AUTO_INCREMENT PRIMARY KEY,
+    name        VARCHAR(60)     NOT NULL,        -- e.g. "Fall 2024"
+    start_date  DATE            NOT NULL,
+    end_date    DATE            NOT NULL,
+    is_current  TINYINT(1)      NOT NULL DEFAULT 0,
+    created_at  DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
