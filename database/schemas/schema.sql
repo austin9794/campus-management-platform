@@ -92,3 +92,21 @@ CREATE TABLE attendance (
     FOREIGN KEY (marked_by)  REFERENCES users(id),
     INDEX idx_course_date (course_id, date)
 );
+
+-- 007: assignments
+CREATE TABLE assignments (
+    id              INT UNSIGNED    AUTO_INCREMENT PRIMARY KEY,
+    course_id       INT UNSIGNED    NOT NULL,
+    title           VARCHAR(180)    NOT NULL,
+    description     TEXT            NULL,
+    total_marks     DECIMAL(6,2)    NOT NULL DEFAULT 100.00,
+    due_date        DATETIME        NOT NULL,
+    allow_late      TINYINT(1)      NOT NULL DEFAULT 0,
+    late_penalty_pct DECIMAL(5,2)   NOT NULL DEFAULT 0.00,
+    created_by      INT UNSIGNED    NOT NULL,
+    created_at      DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (course_id)  REFERENCES courses(id) ON DELETE CASCADE,
+    FOREIGN KEY (created_by) REFERENCES users(id),
+    INDEX idx_course_due (course_id, due_date)
+);
+
