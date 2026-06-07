@@ -162,3 +162,24 @@ VALUES
 10,
 2
 );
+
+-- ==========================================================
+-- SUBMISSIONS
+-- ==========================================================
+
+INSERT INTO submissions
+(
+assignment_id,
+student_id,
+file_path,
+submitted_at,
+status
+)
+VALUES
+(
+1,
+3,
+'uploads/submissions/assignment1.pdf',
+NOW(),
+'graded'
+);
