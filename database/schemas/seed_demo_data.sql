@@ -18,3 +18,35 @@ TRUNCATE TABLE departments;
 TRUNCATE TABLE users;
 
 SET FOREIGN_KEY_CHECKS = 1;
+
+-- ==========================================================
+-- USERS
+-- ==========================================================
+
+INSERT INTO users
+(name,email,password_hash,role,email_verified_at)
+VALUES
+
+(
+'System Administrator',
+'admin@campus.local',
+'REPLACE_ADMIN_HASH',
+'admin',
+NOW()
+),
+
+(
+'Dr Sarah Wilson',
+'faculty@campus.local',
+'REPLACE_FACULTY_HASH',
+'faculty',
+NOW()
+),
+
+(
+'John Student',
+'student@campus.local',
+'REPLACE_STUDENT_HASH',
+'student',
+NOW()
+);
