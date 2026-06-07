@@ -76,3 +76,19 @@ CREATE TABLE enrollments (
     INDEX idx_student (student_id)
 );
 
+-- 006: attendance
+CREATE TABLE attendance (
+    id          INT UNSIGNED    AUTO_INCREMENT PRIMARY KEY,
+    student_id  INT UNSIGNED    NOT NULL,
+    course_id   INT UNSIGNED    NOT NULL,
+    date        DATE            NOT NULL,
+    status      ENUM('present','absent','late','excused') NOT NULL,
+    note        VARCHAR(255)    NULL,
+    marked_by   INT UNSIGNED    NOT NULL,   -- faculty user id
+    created_at  DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE KEY uq_attendance (student_id, course_id, date),
+    FOREIGN KEY (student_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (course_id)  REFERENCES courses(id) ON DELETE CASCADE,
+    FOREIGN KEY (marked_by)  REFERENCES users(id),
+    INDEX idx_course_date (course_id, date)
+);
