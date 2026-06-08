@@ -21,3 +21,8 @@ define('SUBMISSION_GRADED',   'graded');
 define('SUBMISSION_LATE',     'late');
 define('SUBMISSION_RETURNED', 'returned');
 
+// Grade Letter Boundaries
+define('GRADE_A_MIN', 90);
+define('GRADE_B_MIN', 80);
+define('GRADE_C_MIN', 70);
+define('GRADE_D_MIN', 60);
