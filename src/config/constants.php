@@ -29,3 +29,7 @@ define('GRADE_D_MIN', 60);
 
 // Pagination
 define('DEFAULT_PAGE_SIZE', 20);
+
+// Token Expiry (seconds)
+define('PASSWORD_RESET_EXPIRY', 3600);    // 1 hour
+define('EMAIL_VERIFY_EXPIRY',   86400);   // 24 hours
