@@ -14,3 +14,10 @@ define('ATTENDANCE_PRESENT', 'present');
 define('ATTENDANCE_ABSENT',  'absent');
 define('ATTENDANCE_LATE',    'late');
 define('ATTENDANCE_EXCUSED', 'excused');
+
+// Submission Statuses
+define('SUBMISSION_PENDING',  'pending');
+define('SUBMISSION_GRADED',   'graded');
+define('SUBMISSION_LATE',     'late');
+define('SUBMISSION_RETURNED', 'returned');
+
