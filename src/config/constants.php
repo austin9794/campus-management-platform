@@ -26,3 +26,6 @@ define('GRADE_A_MIN', 90);
 define('GRADE_B_MIN', 80);
 define('GRADE_C_MIN', 70);
 define('GRADE_D_MIN', 60);
+
+// Pagination
+define('DEFAULT_PAGE_SIZE', 20);
