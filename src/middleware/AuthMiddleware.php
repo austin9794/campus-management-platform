@@ -27,3 +27,12 @@ class AuthMiddleware {
             exit;
         }
     }
+
+    /** Prevent logged-in users from accessing guest-only pages (e.g. login) */
+    public static function guest(): void {
+        if (SessionHelper::isLoggedIn()) {
+            ResponseHelper::redirect(SessionHelper::dashboardUrl());
+            exit;
+        }
+    }
+}
