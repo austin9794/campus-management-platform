@@ -62,5 +62,22 @@ class AuthController {
         require_once ROOT_PATH . '/views/auth/forgot-password.php';
     }
 
+    /** POST /forgot-password */
+    public static function forgotPassword(): void {
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+        $user  = User::findByEmail($email);
+
+        // Always show success to prevent email enumeration
+        if ($user) {
+            $token = bin2hex(random_bytes(32));
+            User::saveResetToken($user['id'], $token);
+            EmailService::sendPasswordReset($user['email'], $user['name'], $token);
+        }
+
+        SessionHelper::flash('success', 'If that email exists, a reset link has been sent.');
+        ResponseHelper::redirect('/forgot-password');
+    }
+
+
 
 
