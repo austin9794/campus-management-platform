@@ -51,3 +51,10 @@ class AuthController {
         ResponseHelper::redirect(SessionHelper::dashboardUrl());
     }
 
+    /** POST /logout */
+    public static function logout(): void {
+        AuthService::destroySession();
+        ResponseHelper::redirect('/login');
+    }
+
+
