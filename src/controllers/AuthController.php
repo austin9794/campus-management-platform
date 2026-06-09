@@ -78,6 +78,19 @@ class AuthController {
         ResponseHelper::redirect('/forgot-password');
     }
 
+    /** GET /reset-password?token=xxx */
+    public static function showResetPassword(): void {
+        $token = filter_input(INPUT_GET, 'token', FILTER_SANITIZE_SPECIAL_CHARS);
+        $user  = User::findByResetToken($token);
+        if (!$user) {
+            SessionHelper::flash('error', 'This reset link is invalid or has expired.');
+            ResponseHelper::redirect('/forgot-password');
+            return;
+        }
+        require_once ROOT_PATH . '/views/auth/reset-password.php';
+    }
+
+
 
 
 
