@@ -57,4 +57,10 @@ class AuthController {
         ResponseHelper::redirect('/login');
     }
 
+    /** GET /forgot-password */
+    public static function showForgotPassword(): void {
+        require_once ROOT_PATH . '/views/auth/forgot-password.php';
+    }
+
+
 
