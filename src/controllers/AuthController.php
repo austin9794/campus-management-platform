@@ -90,6 +90,25 @@ class AuthController {
         require_once ROOT_PATH . '/views/auth/reset-password.php';
     }
 
+    /** POST /reset-password */
+    public static function resetPassword(): void {
+        $token    = filter_input(INPUT_POST, 'token',    FILTER_SANITIZE_SPECIAL_CHARS);
+        $password = filter_input(INPUT_POST, 'password', FILTER_DEFAULT);
+        $confirm  = filter_input(INPUT_POST, 'confirm',  FILTER_DEFAULT);
+
+        $user = User::findByResetToken($token);
+        if (!$user || $password !== $confirm || strlen($password) < 8) {
+            SessionHelper::flash('error', 'Invalid request or passwords do not match (min 8 chars).');
+            ResponseHelper::redirect('/reset-password?token=' . urlencode($token));
+            return;
+        }
+
+        User::updatePassword($user['id'], $password);
+        SessionHelper::flash('success', 'Password updated. Please log in.');
+        ResponseHelper::redirect('/login');
+    }
+}
+
 
 
 
