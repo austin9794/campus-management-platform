@@ -16,3 +16,38 @@ class AuthController {
         }
         require_once ROOT_PATH . '/views/auth/login.php';
     }
+
+    /** POST /login */
+    public static function login(): void {
+        $email    = filter_input(INPUT_POST, 'email',    FILTER_SANITIZE_EMAIL);
+        $password = filter_input(INPUT_POST, 'password', FILTER_DEFAULT);
+
+        $errors = ValidationHelper::validate([
+            'email'    => ['required', 'email'],
+            'password' => ['required'],
+        ], ['email' => $email, 'password' => $password]);
+
+        if ($errors) {
+            SessionHelper::flash('errors', $errors);
+            ResponseHelper::redirect('/login');
+            return;
+        }
+
+        $user = User::findByEmail($email);
+
+        if (!$user || !User::verifyPassword($password, $user['password_hash'])) {
+            SessionHelper::flash('error', 'Invalid email or password.');
+            ResponseHelper::redirect('/login');
+            return;
+        }
+
+        if (!$user['is_active']) {
+            SessionHelper::flash('error', 'Your account has been deactivated. Contact support.');
+            ResponseHelper::redirect('/login');
+            return;
+        }
+
+        AuthService::createSession($user);
+        ResponseHelper::redirect(SessionHelper::dashboardUrl());
+    }
+
