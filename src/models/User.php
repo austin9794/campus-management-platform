@@ -68,6 +68,27 @@ class User {
         );
     }
 
+    // ── Listing ───────────────────────────────────────────────────────────────
+    public static function all(string $role = null, int $page = 1, int $perPage = 20): array {
+        $offset = ($page - 1) * $perPage;
+        $where  = $role ? 'WHERE role = ?' : '';
+        $params = $role ? [$role, $perPage, $offset] : [$perPage, $offset];
+        return Database::query(
+            "SELECT id, name, email, role, is_active, created_at FROM users $where
+             ORDER BY created_at DESC LIMIT ? OFFSET ?",
+            $params
+        );
+    }
+
+    public static function count(string $role = null): int {
+        $where  = $role ? 'WHERE role = ?' : '';
+        $params = $role ? [$role] : [];
+        $row    = Database::queryOne("SELECT COUNT(*) AS cnt FROM users $where", $params);
+        return (int) ($row['cnt'] ?? 0);
+    }
+}
+
+
 
 
 
