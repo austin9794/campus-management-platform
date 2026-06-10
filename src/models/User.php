@@ -19,4 +19,31 @@ class User {
         );
     }
 
-    
+    // ── Auth ──────────────────────────────────────────────────────────────────
+    public static function create(array $data): int {
+        Database::execute(
+            'INSERT INTO users (name, email, password_hash, role, created_at)
+             VALUES (?, ?, ?, ?, NOW())',
+            [
+                $data['name'],
+                strtolower(trim($data['email'])),
+                password_hash($data['password'], PASSWORD_BCRYPT, ['cost' => 12]),
+                $data['role'],
+            ]
+        );
+        return (int) Database::lastInsertId();
+    }
+
+    public static function verifyPassword(string $plain, string $hash): bool {
+        return password_verify($plain, $hash);
+    }
+
+    public static function updatePassword(int $id, string $newPassword): void {
+        Database::execute(
+            'UPDATE users SET password_hash = ?, updated_at = NOW() WHERE id = ?',
+            [password_hash($newPassword, PASSWORD_BCRYPT, ['cost' => 12]), $id]
+        );
+    }
+
+
+
