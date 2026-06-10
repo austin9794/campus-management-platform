@@ -45,5 +45,21 @@ class User {
         );
     }
 
+    // ── Tokens ────────────────────────────────────────────────────────────────
+    public static function saveResetToken(int $id, string $token): void {
+        Database::execute(
+            'UPDATE users SET reset_token = ?, reset_token_expires = DATE_ADD(NOW(), INTERVAL 1 HOUR) WHERE id = ?',
+            [hash('sha256', $token), $id]
+        );
+    }
+
+    public static function findByResetToken(string $token): ?array {
+        return Database::queryOne(
+            'SELECT * FROM users WHERE reset_token = ? AND reset_token_expires > NOW()',
+            [hash('sha256', $token)]
+        );
+    }
+
+
 
 
