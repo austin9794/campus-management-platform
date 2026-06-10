@@ -60,6 +60,15 @@ class User {
         );
     }
 
+    // ── Status ───────────────────────────────────────────────────────────────
+    public static function setActive(int $id, bool $active): void {
+        Database::execute(
+            'UPDATE users SET is_active = ? WHERE id = ?',
+            [(int) $active, $id]
+        );
+    }
+
+
 
 
 
