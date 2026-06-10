@@ -26,3 +26,15 @@ App::init();
 LoggingMiddleware::handle();
 RateLimitMiddleware::handle();
 CsrfMiddleware::handle();
+
+// Parse the request
+$uri    = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$method = $_SERVER['REQUEST_METHOD'];
+
+// Route to API or web
+if (str_starts_with($uri, '/api/')) {
+    require_once SRC_PATH . '/api/routes.php';
+} else {
+    require_once SRC_PATH . '/web_routes.php';
+}
+
