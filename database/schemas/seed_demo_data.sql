@@ -38,7 +38,7 @@ NOW()
 (
 'Dr Sarah Wilson',
 'faculty@campus.local',
-'REPLACE_FACULTY_HASH',
+'$2a$12$JQMlemDvJkCFI6roClTzMugGvxEwgg.F4q4plxsMP3NfTcYsxcsGC',
 'faculty',
 NOW()
 ),
