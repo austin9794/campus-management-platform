@@ -52,7 +52,15 @@ NOW()
 ),
 
 (
-'John Student',
+'Musa Ali',
+'student2@campus.local',
+'$2a$12$NWmGDdvWPPSpmAMhvLiK2.8sxl2dByI673DNSjeY.ha6DSlQOxOsq',
+'student',
+NOW()
+),
+
+(
+'John Doe',
 'student@campus.local',
 '$2a$12$BJPKOcEThcKm/GArkevhouyHxcolPnxe9V58GkARUzJ4S86hxPB3i',
 'student',
