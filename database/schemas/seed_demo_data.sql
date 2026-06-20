@@ -30,7 +30,7 @@ VALUES
 (
 'System Administrator',
 'admin@campus.local',
-'REPLACE_ADMIN_HASH',
+'$2a$12$gCt0RE5FPzxqpvTC6tS0tOtdlEfPMMc06CJ9xiZoGsfvYipFfRRm6',
 'admin',
 NOW()
 ),
