@@ -44,6 +44,14 @@ NOW()
 ),
 
 (
+'Dr Rober Egger',
+'faculty2@campus.local',
+'$2a$12$PZHM/XhIYTtyE.MV/BHOOeaaCRxbvJE3TZHwBSEuE8haqNDUgch0S',
+'faculty',
+NOW()
+),
+
+(
 'John Student',
 'student@campus.local',
 '$2a$12$BJPKOcEThcKm/GArkevhouyHxcolPnxe9V58GkARUzJ4S86hxPB3i',
