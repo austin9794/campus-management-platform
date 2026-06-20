@@ -46,7 +46,7 @@ NOW()
 (
 'John Student',
 'student@campus.local',
-'REPLACE_STUDENT_HASH',
+'$2a$12$BJPKOcEThcKm/GArkevhouyHxcolPnxe9V58GkARUzJ4S86hxPB3i',
 'student',
 NOW()
 );
