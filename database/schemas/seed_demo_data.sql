@@ -212,6 +212,28 @@ VALUES
 4,
 4,
 1
+),
+
+(
+'BA1OM',
+'Operations Management',
+'Focuses on optimizing supply chains, inventory control, and business process delivery pipelines.',
+15,
+40,
+5,
+4,
+1
+),
+
+(
+'BA1SM',
+'Strategic Management',
+'Analyzes framework formulation and execution steps to build sustainable corporate competitive advantages.',
+15,
+40,
+5,
+4,
+1
 );
 
 -- ==========================================================
