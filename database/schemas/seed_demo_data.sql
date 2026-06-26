@@ -112,7 +112,7 @@ INSERT INTO enrollments
 (student_id,course_id,status)
 VALUES
 (
-3,
+4,
 1,
 'active'
 );
