@@ -189,7 +189,7 @@ status
 VALUES
 (
 1,
-3,
+4,
 'uploads/submissions/assignment1.pdf',
 NOW(),
 'graded'
