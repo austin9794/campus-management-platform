@@ -267,15 +267,34 @@ VALUES
 INSERT INTO enrollments
 (student_id,course_id,status)
 VALUES
+
 (
-4,
+5,
 1,
 'active'
 ),
 
 (
+6,
+2,
+'active'
+),
+
+(
+7,
+4,
+'active'
+),
+
+(
+8,
+3,
+'active'
+),
+
+(
+9,
 5,
-1,
 'active'
 );
 
