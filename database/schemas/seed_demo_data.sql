@@ -232,7 +232,7 @@ VALUES
 (
 2,
 'Student Enrollment',
-'John Student has enrolled in CS101.',
+'John Doe has enrolled in CS101.',
 'info'
 ),
 
