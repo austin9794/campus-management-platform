@@ -149,7 +149,7 @@ VALUES
 ),
 
 (
-'CS1NS',
+'CY1NS',
 'Network Security',
 'Covers securing data transmission using encryption algorithms and defensive network protocols.',
 10,
@@ -160,13 +160,35 @@ VALUES
 ),
 
 (
-'CS1DF',
+'CY1DF',
 'Digital Forensics',
 'Focuses on recovering, preserving, and analyzing digital evidence from compromised devices.',
 15,
 40,
 2,
 2,
+1
+),
+
+(
+'BE1BI',
+'Biomedical Instrumentation',
+'Focuses on the electronic sensors used to monitor and acquire biological data.',
+15,
+40,
+3,
+3,
+1
+),
+
+(
+'BE1TE',
+'Tissue Engineering',
+'Explores designing synthetic or natural materials compatible with human body systems.',
+15,
+40,
+3,
+3,
 1
 );
 
