@@ -44,7 +44,7 @@ NOW()
 
 (
 'Musa Ali',
-'student2@campus.local',
+'student@campus.local',
 '$2a$12$NWmGDdvWPPSpmAMhvLiK2.8sxl2dByI673DNSjeY.ha6DSlQOxOsq',
 'student',
 NOW()
@@ -52,8 +52,32 @@ NOW()
 
 (
 'John Doe',
-'student@campus.local',
+'student2@campus.local',
 '$2a$12$BJPKOcEThcKm/GArkevhouyHxcolPnxe9V58GkARUzJ4S86hxPB3i',
+'student',
+NOW()
+),
+
+(
+'Lincy Jones',
+'student3@campus.local',
+'$2a$12$2X/Pefzd88u7xHHRk5to..wkmBPhC6nCvdEDjmV3gnLUzbhw7lfva',
+'student',
+NOW()
+),
+
+(
+'Alice Brown',
+'student4@campus.local',
+'$2a$12$Aj0ZK.hShVtrNmFmnwv0ge6iRUW7.9SAc2YsoeEqDvQFCzq9vytNi',
+'student',
+NOW()
+),
+
+(
+'Karan Tiwari',
+'student5@campus.local',
+'$2a$12$MEz0fwyW.DpqJILXaukJ2.NuBG26Qzr1e7DPStFfY/GZkBNGh8cdq',
 'student',
 NOW()
 );
