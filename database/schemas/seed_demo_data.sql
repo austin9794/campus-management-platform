@@ -190,6 +190,28 @@ VALUES
 3,
 3,
 1
+),
+
+(
+'AF1CF',
+'Corporate Finance',
+'Focuses on capital budgeting, investment decisions, and corporate maximizing of shareholder wealth.',
+15,
+40,
+4,
+4,
+1
+),
+
+(
+'AF1FA',
+'Financial Accounting',
+'Teaches standard practices for recording transactions and preparing corporate financial statements.',
+15,
+40,
+4,
+4,
+1
 );
 
 -- ==========================================================
