@@ -35,6 +35,14 @@ NOW()
 ),
 
 (
+'Dr Steven Smith',
+'faculty3@campus.local',
+'$2a$12$irJlmFKjph82r4fulI0N8expflQa/GsGqK.4ewRhLxW4QF.L6oOL.',
+'faculty',
+NOW()
+),
+
+(
 'Musa Ali',
 'student2@campus.local',
 '$2a$12$NWmGDdvWPPSpmAMhvLiK2.8sxl2dByI673DNSjeY.ha6DSlQOxOsq',
@@ -78,13 +86,13 @@ VALUES
 (
 'Accounting and Finance',
 'AF',
-1
+4
 ),
 
 (
 'Business Administration',
 'BA',
-1
+4
 );
 
 
