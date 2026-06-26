@@ -127,12 +127,45 @@ semester_id
 )
 VALUES
 (
-'CS101',
+'CS1IP',
 'Introduction to Programming',
 'Fundamentals of programming using modern software development practices.',
-3,
+15,
 40,
 1,
+2,
+1
+),
+
+(
+'CS1IAI',
+'Introduction to Artificial Intelligence',
+'Introduces machine learning, neural networks, and heuristic search techniques for data modeling.',
+15,
+40,
+1,
+2,
+1
+),
+
+(
+'CS1NS',
+'Network Security',
+'Covers securing data transmission using encryption algorithms and defensive network protocols.',
+10,
+40,
+2,
+2,
+1
+),
+
+(
+'CS1DF',
+'Digital Forensics',
+'Focuses on recovering, preserving, and analyzing digital evidence from compromised devices.',
+15,
+40,
+2,
 2,
 1
 );
