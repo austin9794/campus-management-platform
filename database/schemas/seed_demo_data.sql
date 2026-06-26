@@ -61,7 +61,32 @@ VALUES
 'Computer Science',
 'CS',
 2
+),
+
+(
+'Cybersecurity',
+'CY',
+2
+),
+
+(
+'Biomedical Engineering',
+'BE',
+3
+),
+
+(
+'Accounting and Finance',
+'AF',
+1
+),
+
+(
+'Business Administration',
+'BA',
+1
 );
+
 
 -- ==========================================================
 -- SEMESTERS
