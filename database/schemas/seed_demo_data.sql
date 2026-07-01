@@ -511,13 +511,12 @@ submitted_at,
 status
 )
 VALUES
-(
-1,
-4,
-'uploads/submissions/assignment1.pdf',
-NOW(),
-'graded'
-);
+-- Assignment 1
+(1, 5, 'uploads/submissions/assignment1_student5.pdf', NOW(), 'graded'),
+(1, 6, 'uploads/submissions/assignment1_student6.pdf', NOW(), 'submitted'),
+(1, 7, 'uploads/submissions/assignment1_student7.pdf', NOW(), 'graded'),
+(1, 8, 'uploads/submissions/assignment1_student8.pdf', NOW(), 'submitted'),
+(1, 9, 'uploads/submissions/assignment1_student9.pdf', NOW(), 'late'),
 
 -- ==========================================================
 -- GRADES
