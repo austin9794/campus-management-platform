@@ -593,12 +593,26 @@ marks_obtained,
 feedback
 )
 VALUES
-(
-1,
-2,
-85,
-'Good work. Well structured solution with minor improvements required.'
-);
+(1,  2, 85, 'Good work. Well structured solution with minor improvements required.'),
+(3,  3, 91, 'Excellent implementation with clear documentation.'),
+(7,  4, 88, 'Strong submission. A few minor issues were identified.'),
+(9,  2, 94, 'Outstanding work demonstrating a solid understanding of the concepts.'),
+(11, 3, 82, 'Good effort. Review the signal processing calculations.'),
+(14, 4, 89, 'Well-presented assignment with accurate analysis.'),
+(17, 2, 86, 'Good understanding of network security principles.'),
+(19, 3, 93, 'Excellent analysis and practical recommendations.'),
+(21, 4, 80, 'Satisfactory work. More detailed financial analysis is recommended.'),
+(24, 2, 95, 'Exceptional report with comprehensive budgeting and planning.'),
+(27, 3, 84, 'Good design approach. Consider improving the prototype explanation.'),
+(29, 4, 90, 'Well-executed assignment with minimal errors.'),
+(31, 2, 87, 'Good business analysis supported by relevant evidence.'),
+(33, 3, 92, 'Very strong submission with excellent strategic insights.'),
+(37, 4, 83, 'Solid work. Some sections could be expanded further.'),
+(39, 2, 96, 'Excellent assignment with thorough research and analysis.'),
+(41, 3, 81, 'Good attempt. Additional justification for conclusions would improve the report.'),
+(43, 4, 89, 'Well-organized and technically sound submission.'),
+(47, 2, 93, 'Excellent work with strong attention to detail.'),
+(49, 3, 88, 'Good overall performance with only minor improvements needed.');
 
 -- ==========================================================
 -- NOTIFICATIONS
