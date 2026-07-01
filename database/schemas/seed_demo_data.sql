@@ -454,6 +454,28 @@ VALUES
     4
 ),
 
+-- Accounting & Finance (course_id = 4)
+(
+    4,
+    'Financial Statement Analysis',
+    'Analyze the financial performance of a company using ratio analysis.',
+    100,
+    '2026-10-28 23:59:59',
+    1,
+    10,
+    3
+),
+(
+    4,
+    'Budget Planning Assignment',
+    'Prepare an annual operating budget for a medium-sized business using provided financial data.',
+    100,
+    '2026-11-22 23:59:59',
+    1,
+    10,
+    2
+),
+
 -- ==========================================================
 -- SUBMISSIONS
 -- ==========================================================
