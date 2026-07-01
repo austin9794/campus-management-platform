@@ -410,6 +410,28 @@ VALUES
     3
 ),
 
+-- Cyber Security (course_id = 2)
+(
+    2,
+    'Network Security Analysis',
+    'Analyze common network vulnerabilities and propose appropriate mitigation techniques.',
+    100,
+    '2026-10-20 23:59:59',
+    1,
+    10,
+    3
+),
+(
+    2,
+    'Password Security Audit',
+    'Evaluate password policies and recommend improvements based on current cybersecurity standards.',
+    100,
+    '2026-11-12 23:59:59',
+    1,
+    10,
+    4
+),
+
 -- ==========================================================
 -- SUBMISSIONS
 -- ==========================================================
