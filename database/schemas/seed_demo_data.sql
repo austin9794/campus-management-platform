@@ -560,7 +560,12 @@ VALUES
 (7, 8, 'uploads/submissions/assignment7_student8.pdf', NOW(), 'submitted'),
 (7, 9, 'uploads/submissions/assignment7_student9.pdf', NOW(), 'late'),
 
-
+-- Assignment 8
+(8, 5, 'uploads/submissions/assignment8_student5.pdf', NOW(), 'submitted'),
+(8, 6, 'uploads/submissions/assignment8_student6.pdf', NOW(), 'graded'),
+(8, 7, 'uploads/submissions/assignment8_student7.pdf', NOW(), 'submitted'),
+(8, 8, 'uploads/submissions/assignment8_student8.pdf', NOW(), 'graded'),
+(8, 9, 'uploads/submissions/assignment8_student9.pdf', NOW(), 'submitted'),
 
 -- ==========================================================
 -- GRADES
