@@ -476,6 +476,28 @@ VALUES
     2
 ),
 
+-- Business Administration (course_id = 5)
+(
+    5,
+    'Marketing Strategy Report',
+    'Develop a comprehensive marketing strategy for a new product launch.',
+    100,
+    '2026-10-30 23:59:59',
+    1,
+    10,
+    4
+),
+(
+    5,
+    'Business Case Study',
+    'Evaluate a real-world business case and recommend strategic improvements.',
+    100,
+    '2026-11-25 23:59:59',
+    1,
+    10,
+    3
+);
+
 -- ==========================================================
 -- SUBMISSIONS
 -- ==========================================================
