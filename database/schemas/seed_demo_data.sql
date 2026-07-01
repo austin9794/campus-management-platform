@@ -432,6 +432,28 @@ VALUES
     4
 ),
 
+-- Biomedical Engineering (course_id = 3)
+(
+    3,
+    'Biomedical Signal Processing',
+    'Process and analyze ECG signal data using digital filtering techniques.',
+    100,
+    '2026-10-25 23:59:59',
+    1,
+    10,
+    2
+),
+(
+    3,
+    'Medical Device Design',
+    'Design a conceptual prototype for a wearable patient monitoring device.',
+    100,
+    '2026-11-18 23:59:59',
+    1,
+    10,
+    4
+),
+
 -- ==========================================================
 -- SUBMISSIONS
 -- ==========================================================
