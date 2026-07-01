@@ -388,16 +388,27 @@ late_penalty_pct,
 created_by
 )
 VALUES
+-- Computer Science (course_id = 1)
 (
-1,
-'Programming Assignment 1',
-'Create a simple student management program.',
-100,
-'2026-10-15 23:59:59',
-1,
-10,
-2
-);
+    1,
+    'Programming Assignment 1',
+    'Develop a console-based student management system using object-oriented programming principles.',
+    100,
+    '2026-10-15 23:59:59',
+    1,
+    10,
+    2
+),
+(
+    1,
+    'Data Structures Assignment',
+    'Implement and compare the performance of stacks, queues, linked lists, and binary search trees.',
+    100,
+    '2026-11-05 23:59:59',
+    1,
+    10,
+    3
+),
 
 -- ==========================================================
 -- SUBMISSIONS
